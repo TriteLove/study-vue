@@ -90,7 +90,6 @@
               }
               //* 把{{}}匹配到的dom丢到监测数组中
               this._watchTpl[placeholder].push(
-                //# vue此处应该为innerText
                 new Watcher(node, placeholder, this, "innerHTML")
               );
             });
@@ -115,5 +114,3 @@
         //* dom.value = myVue.data[key] || dom.innerHtml = myVue.data[key]
         this.node[this.type] = this.vm.$data[this.key];
       };
-
-      //* 补充：通过js改变数据值的时候，手动触发update，在使用vuex的时候会遇到此问题：更新了store数据，但是dom没更新

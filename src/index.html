@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vue双向绑定学习</title>
-</head>
-<body>
-  <div id="app">
-    <input type="text" v-model="name" />
-    <div>{{name}}</div>
-  </div>
-</body>
-<script src="./scripts/index.js"></script>
-<script>
-  /**
-   * 备注
-   *
-   * //   为原文注释
-   * //*  为阅读添加注释
-   *
-   */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue双向绑定学习</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="name" />
+      <div>{{name}}</div>
+      <input type="text" v-model="userName">
+      <div>
+        {{userName}}
+        <input type="password" v-model="password">
+        <div>{{password}}</div>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts/index.js"></script>
+  <script>
+    /**
+     * 备注
+     *
+     * //   为原文注释
+     * //*  为阅读添加注释
+     *
+     */
 
-  window.onload = () => {
-    //* vue实例
-    new MyVue({
-      el: "#app",
-      data: {
-        name: 123
-      }
-    });
-  };
-</script>
+    window.onload = () => {
+      //* vue实例
+      let vm = new MyVue({
+        el: '#app',
+        data: {
+          name: 123,
+          userName: 'zhiling@davyin.com',
+          password: 'zhiling@davyin.com'
+        },
+      });
+    };
+  </script>
 </html>
