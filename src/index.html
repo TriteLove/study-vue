@@ -9,12 +9,10 @@
     <div id="app">
       <input type="text" v-model="name" />
       <div>{{name}}</div>
-      <input type="text" v-model="userName">
-      <div>
-        {{userName}}
-        <input type="password" v-model="password">
-        <div>{{password}}</div>
-      </div>
+      <input type="text" v-model="userName" />
+      <div>{{userName}}</div>
+      <input type="password" v-model="password" />
+      <div>{{password}}</div>
     </div>
   </body>
   <script src="./scripts/index.js"></script>
@@ -34,7 +32,7 @@
         data: {
           name: 123,
           userName: 'zhiling@davyin.com',
-          password: 'zhiling@davyin.com'
+          password: 'zhiling@davyin.com',
         },
       });
     };
